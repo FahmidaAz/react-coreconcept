@@ -7,9 +7,11 @@ function App() {
     {name:'PDF Reader',price:'$30.99'},
     {name:'Illustration', price:'$45.85'}
   ];
-  for(let index = 0; index < productList.length; index++) {
-   let product= productList[index];
-  }
+  const productNames = productList.map(product => product.name
+  )
+  const productPrices =productList.map(product =>product.price);
+  console.log(productNames);
+  console.log(productPrices);
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +22,7 @@ function App() {
         <Person name="Mashrafi bin Mortuza" best="Captain"></Person>
         <Person name="Tamim Iqbal" best="Batsman"></Person>
         
-        <Product></Product>
+       {productList.map(list => <Product name= {list.name} price ={list.price}></Product>)}
        </header>
     </div>
   );
