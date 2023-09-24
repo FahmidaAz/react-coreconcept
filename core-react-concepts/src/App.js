@@ -54,7 +54,7 @@ function App() {
          <h3>{props.name}</h3>
          <h2>{props.price}</h2>
          <p>Description</p>
-          {/* <p><link>link</link></p> */}
+         
       </div>
      )
    }
